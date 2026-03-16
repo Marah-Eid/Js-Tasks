@@ -179,3 +179,43 @@ document.writeln(roo);
 document.writeln("<br>");
 
 /** */
+function countLetterInWords(arr, letter){
+    return arr.filter(word => word.includes(letter)).length;
+}
+
+let rm = countLetterInWords(["apple","banana","car","dog"], "a");
+
+document.writeln(rm);
+document.writeln("<br>");
+
+/** */
+function removeShortWords(arr, length){
+    return arr.filter(word => word.length >= length);
+}
+
+let m = removeShortWords(["apple","cat","banana","dog"],3);
+
+document.writeln(m);
+document.writeln("<br>");
+
+/** */
+function findLongestWord(arr){
+    arr.sort((a,b) => b.length - a.length);
+    return arr[0];
+}
+
+let y = findLongestWord(["apple","banana","cat","elephant"]);
+
+document.writeln(y);
+document.writeln("<br>");
+
+/** */
+function findshortestWord(arr){
+    arr.sort((a,b) => a.length - b.length);
+    return arr[0];
+}
+
+let ye = findshortestWord(["apple","banana","cat","elephant"]);
+
+document.writeln(ye);
+document.writeln("<br>");
